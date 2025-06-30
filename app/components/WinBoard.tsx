@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { useAppStore } from '../store/useAppStore';
-import SelectedCard from '@/app/components/SelectedCard';
+import AddWinForm from '../features/goals/AddWinForm';
 
 export default function WinBoard() {
     const wins = useAppStore((state) => state.wins);
@@ -10,16 +10,11 @@ export default function WinBoard() {
     const goals = useAppStore((state) => state.goals);
     const selectedGoalId = useAppStore((state) => state.selectedGoalId);
     const selectedGoal = goals.find(goal => goal.id === selectedGoalId);
-    
-    {/*
-    useEffect(() => {
-        fetchWins('guest'); // Replace with userId later
-    }, []);*/}
 
   return (
     <div className='container'>
       <div className=''>
-      <SelectedCard />
+      <AddWinForm />
       </div>
       <div>
         <h2 className="text-xl font-semibold">

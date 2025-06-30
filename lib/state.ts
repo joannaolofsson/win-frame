@@ -8,15 +8,15 @@ export type UIState = {
 export type SmallWin = {
     id: string;
     goalId: string;
-    content: string;
-    emotion?: string;
+    text: string | undefined;
+    emotions?: string[];
     createdAt: string;
 }
 
 export type FrameGoal = {
     id: string;
     title: string;
-    description: string;
+    description?: string;
 }
 
 export type Progress = {
@@ -24,10 +24,10 @@ export type Progress = {
 }
 
 export type LogicState = {
-    goals: FrameGoal[];
-    selectedGoalId: string | null;
-    wins: SmallWin[];
-    addGoal: (goal: FrameGoal) => void;
-    selectedGoal: (goalId: string) => void;
-    addWin: (content: string) => void;
+    selectedGoals: FrameGoal[];
+    activeGoalId: string | null;
+    smallwins: SmallWin[];
+    setSelectedGoals: (goal: FrameGoal) => void;
+    setActiveGoal: (goalId: string) => void;
+    addSmallWin: (win: SmallWin) => void;
 }
