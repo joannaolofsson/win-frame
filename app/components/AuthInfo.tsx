@@ -1,4 +1,4 @@
-// This component adds info to page about login state
+/*
 
 import { createServerSupabase } from "@/lib/supabase/server";
 
@@ -13,4 +13,4 @@ export default async function AuthInfo() {
     if(!session) return <p>Please log in</p>
 
   return  <p>Logged in as {session.user.email}</p>
-}
+}*/

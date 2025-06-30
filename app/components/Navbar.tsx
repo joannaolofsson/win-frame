@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import AuthForm from './AuthForm';
+//import AuthForm from './AuthForm';
 import { Button } from '@/components/ui/button';
 
 export default function Navbar() {
@@ -28,7 +28,7 @@ export default function Navbar() {
             className="bg-white max-w-md w-full mx-4 md:mx-0 rounded-xl p-6 shadow-lg animate-slide-up"
             onClick={(e) => e.stopPropagation()} 
           >
-            <AuthForm />
+            {/*<AuthForm />*/}
             <Button
               variant="ghost"
               className="mt-4 text-sm text-gray-600 hover:text-red-600"
